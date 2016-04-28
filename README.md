@@ -5,7 +5,7 @@ License: [MIT]
 
 ### Basic Usage
 
-Ensure you have install `peerDependencies` && **webpack/browserify** with `babel-preset-es2015`
+Ensure you have install `peerDependencies`
 
 `$ npm i react jquery --save`
 
