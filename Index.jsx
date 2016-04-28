@@ -64,7 +64,7 @@ class ChinaCity extends React.Component {
               ref={`select${index}`}
             >
               <option value="0">{levelName}</option>
-              {this.state.list[index].map((x, i) => <option key={i} value={x[1]}>{x[0]}</option>)}
+              {(this.state.list[index] || []).map((x, i) => <option key={i} value={x[1]}>{x[0]}</option>)}
             </select>
           ))
         }

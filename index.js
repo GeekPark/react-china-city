@@ -99,7 +99,7 @@ var ChinaCity = function (_React$Component) {
               { value: '0' },
               levelName
             ),
-            _this3.state.list[index].map(function (x, i) {
+            (_this3.state.list[index] || []).map(function (x, i) {
               return _react2.default.createElement(
                 'option',
                 { key: i, value: x[1] },
@@ -128,3 +128,4 @@ ChinaCity.propTypes = {
 };
 
 exports.default = ChinaCity;
+
