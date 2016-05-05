@@ -59,13 +59,15 @@ class ChinaCity extends React.Component {
       <div>
         {
           levels.map((levelName, index) => (
-            <select key={index} onChange={this.select} data-level={index}
-              name={levels.length - 1 === index ? this.props.resultName : ''}
-              ref={`select${index}`}
-            >
-              <option value="0">{levelName}</option>
-              {(this.state.list[index] || []).map((x, i) => <option key={i} value={x[1]}>{x[0]}</option>)}
-            </select>
+            <span className="select-wrapper" key={index}>
+              <select key={index} onChange={this.select} data-level={index}
+                name={levels.length - 1 === index ? this.props.resultName : ''}
+                ref={`select${index}`}
+              >
+                <option value="0">{levelName}</option>
+                {(this.state.list[index] || []).map((x, i) => <option key={i} value={x[1]}>{x[0]}</option>)}
+              </select>
+            </span>
           ))
         }
       </div>

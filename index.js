@@ -89,23 +89,27 @@ var ChinaCity = function (_React$Component) {
         null,
         levels.map(function (levelName, index) {
           return _react2.default.createElement(
-            'select',
-            { key: index, onChange: _this3.select, 'data-level': index,
-              name: levels.length - 1 === index ? _this3.props.resultName : '',
-              ref: 'select' + index
-            },
+            'div',
+            { className: 'select-wrapper', key: index },
             _react2.default.createElement(
-              'option',
-              { value: '0' },
-              levelName
-            ),
-            (_this3.state.list[index] || []).map(function (x, i) {
-              return _react2.default.createElement(
+              'select',
+              { key: index, onChange: _this3.select, 'data-level': index,
+                name: levels.length - 1 === index ? _this3.props.resultName : '',
+                ref: 'select' + index
+              },
+              _react2.default.createElement(
                 'option',
-                { key: i, value: x[1] },
-                x[0]
-              );
-            })
+                { value: '0' },
+                levelName
+              ),
+              (_this3.state.list[index] || []).map(function (x, i) {
+                return _react2.default.createElement(
+                  'option',
+                  { key: i, value: x[1] },
+                  x[0]
+                );
+              })
+            )
           );
         })
       );
