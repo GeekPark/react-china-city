@@ -47,7 +47,7 @@ class ChinaCity extends React.Component {
   getList(id, cb) {
     $.get(`${this.props.route}/${id}`)
       .done(d => {
-        if (d.data) cb(d.data);
+        if (Array.isArray(d)) cb(d);
       })
       .fail(xhr => {
         console.error(xhr);

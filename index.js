@@ -74,7 +74,7 @@ var ChinaCity = function (_React$Component) {
     key: 'getList',
     value: function getList(id, cb) {
       _jquery2.default.get(this.props.route + '/' + id).done(function (d) {
-        if (d.data) cb(d.data);
+        if (Array.isArray(d)) cb(d);
       }).fail(function (xhr) {
         console.error(xhr);
       });
@@ -89,7 +89,7 @@ var ChinaCity = function (_React$Component) {
         null,
         levels.map(function (levelName, index) {
           return _react2.default.createElement(
-            'div',
+            'span',
             { className: 'select-wrapper', key: index },
             _react2.default.createElement(
               'select',
